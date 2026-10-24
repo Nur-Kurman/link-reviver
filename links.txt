@@ -1,0 +1,30 @@
+# --- should be OK ---
+https://www.python.org
+https://github.com
+https://httpbin.org/status/200
+
+# --- should be DEAD (404/410) ---
+https://httpbin.org/status/404
+https://httpbin.org/status/410
+https://www.python.org/this-page-does-not-exist
+
+# --- redirects ---
+https://httpbin.org/redirect/1
+https://httpbin.org/redirect/20
+http://github.com
+
+# --- errors ---
+https://this-domain-definitely-does-not-exist-12345.com
+https://httpbin.org/delay/15
+
+# --- tricky statuses ---
+https://httpbin.org/status/403
+https://httpbin.org/status/500
+https://httpbin.org/status/418
+
+# --- MissingSchema ---
+python.org
+
+# --- SSLError ---
+https://expired.badssl.com
+https://self-signed.badssl.com
